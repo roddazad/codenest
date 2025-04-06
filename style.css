@@ -46,35 +46,67 @@ body {
     pointer-events: none;
   }
   
-  /* 6. Star Styles */
-  .star {
+ /* Star Style with Floating Animation */
+.star {
     position: absolute;
     width: 3px;
     height: 3px;
     background: white;
     border-radius: 50%;
     opacity: 0.9;
-    animation: twinkle 3s infinite ease-in-out;
+    animation-name: twinkle, floatStar;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
   }
   
-  /* 7. Twinkle Animation */
-  @keyframes twinkle {
+/* Twinkling like before */
+@keyframes twinkle {
     0%, 100% { opacity: 0.9; }
     50% { opacity: 0.2; }
   }
+  /* Gently float around like stardust */
+  @keyframes floatStar {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-40px, 30px); }
+    50%  { transform: translate(50px, -35px); }
+    75%  { transform: translate(-30px, -45px); }
+    100% { transform: translate(0, 0); }
+  }
   
-  /* 8. Random Star Positions */
-  .star:nth-child(1) { top: 10%; left: 15%; }
-  .star:nth-child(2) { top: 20%; left: 70%; }
-  .star:nth-child(3) { top: 40%; left: 50%; }
-  .star:nth-child(4) { top: 60%; left: 30%; }
-  .star:nth-child(5) { top: 80%; left: 80%; }
-  .star:nth-child(6) { top: 15%; left: 90%; }
-  .star:nth-child(7) { top: 25%; left: 40%; }
-  .star:nth-child(8) { top: 65%; left: 20%; }
-  .star:nth-child(9) { top: 75%; left: 60%; }
-  .star:nth-child(10) { top: 35%; left: 85%; }
-  
+  /* 8. Unique Star Positions (30 total) */
+  .star:nth-child(1) { top: 10%; left: 15%;
+    animation-delay: 0.5s, 0.5s;
+    animation-duration: 3s, 28s;}
+    .star:nth-child(1)  { top: 10%; left: 15%; animation-delay: 0.5s, 0.5s; animation-duration: 3s, 28s; }
+    .star:nth-child(2)  { top: 20%; left: 70%; animation-delay: 1.2s, 1.2s; animation-duration: 3s, 32s; }
+    .star:nth-child(3)  { top: 40%; left: 50%; animation-delay: 0s, 0s; animation-duration: 3s, 35s; }
+    .star:nth-child(4)  { top: 60%; left: 30%; animation-delay: 2.5s, 2.5s; animation-duration: 3s, 31s; }
+    .star:nth-child(5)  { top: 80%; left: 80%; animation-delay: 0.8s, 0.8s; animation-duration: 3s, 33s; }
+    .star:nth-child(6)  { top: 15%; left: 90%; animation-delay: 1.8s, 1.8s; animation-duration: 3s, 30s; }
+    .star:nth-child(7)  { top: 25%; left: 40%; animation-delay: 2.2s, 2.2s; animation-duration: 3s, 36s; }
+    .star:nth-child(8)  { top: 65%; left: 20%; animation-delay: 0.3s, 0.3s; animation-duration: 3s, 34s; }
+    .star:nth-child(9)  { top: 75%; left: 60%; animation-delay: 1.5s, 1.5s; animation-duration: 3s, 29s; }
+    .star:nth-child(10) { top: 35%; left: 85%; animation-delay: 0.9s, 0.9s; animation-duration: 3s, 37s; }
+    .star:nth-child(11) { top: 12%; left: 25%; animation-delay: 1.7s, 1.7s; animation-duration: 3s, 31s; }
+    .star:nth-child(12) { top: 30%; left: 75%; animation-delay: 0.2s, 0.2s; animation-duration: 3s, 38s; }
+    .star:nth-child(13) { top: 55%; left: 10%; animation-delay: 2.3s, 2.3s; animation-duration: 3s, 30s; }
+    .star:nth-child(14) { top: 45%; left: 65%; animation-delay: 1.3s, 1.3s; animation-duration: 3s, 35s; }
+    .star:nth-child(15) { top: 33%; left: 35%; animation-delay: 0.6s, 0.6s; animation-duration: 3s, 33s; }
+    .star:nth-child(16) { top: 85%; left: 15%; animation-delay: 2.8s, 2.8s; animation-duration: 3s, 29s; }
+    .star:nth-child(17) { top: 50%; left: 90%; animation-delay: 1.1s, 1.1s; animation-duration: 3s, 36s; }
+    .star:nth-child(18) { top: 28%; left: 55%; animation-delay: 2s, 2s; animation-duration: 3s, 32s; }
+    .star:nth-child(19) { top: 70%; left: 25%; animation-delay: 0.7s, 0.7s; animation-duration: 3s, 34s; }
+    .star:nth-child(20) { top: 22%; left: 5%; animation-delay: 1.6s, 1.6s; animation-duration: 3s, 30s; }
+    .star:nth-child(21) { top: 17%; left: 48%; animation-delay: 2.7s, 2.7s; animation-duration: 3s, 33s; }
+    .star:nth-child(22) { top: 38%; left: 13%; animation-delay: 0.4s, 0.4s; animation-duration: 3s, 28s; }
+    .star:nth-child(23) { top: 61%; left: 77%; animation-delay: 2.1s, 2.1s; animation-duration: 3s, 35s; }
+    .star:nth-child(24) { top: 11%; left: 68%; animation-delay: 1.9s, 1.9s; animation-duration: 3s, 37s; }
+    .star:nth-child(25) { top: 91%; left: 42%; animation-delay: 1s, 1s; animation-duration: 3s, 31s; }
+    .star:nth-child(26) { top: 29%; left: 17%; animation-delay: 2.9s, 2.9s; animation-duration: 3s, 30s; }
+    .star:nth-child(27) { top: 72%; left: 88%; animation-delay: 1.4s, 1.4s; animation-duration: 3s, 34s; }
+    .star:nth-child(28) { top: 64%; left: 8%; animation-delay: 0.1s, 0.1s; animation-duration: 3s, 36s; }
+    .star:nth-child(29) { top: 49%; left: 73%; animation-delay: 2.4s, 2.4s; animation-duration: 3s, 32s; }
+    .star:nth-child(30) { top: 83%; left: 33%; animation-delay: 0.6s, 0.6s; animation-duration: 3s, 33s; }
   
   /* 9. Main Content Layer Above Stars */
   .main-content {
