@@ -1,0 +1,9 @@
+body {
+    background-color: #041929;
+    color:white;
+  }
+  
+  .nav-link:hover,
+  .navbar-brand:hover {
+    color: #f8d57e !important;
+  }
