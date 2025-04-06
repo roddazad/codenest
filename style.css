@@ -20,7 +20,16 @@ body {
   
   /* 3. Slogan Fade-In Transition */
   .transition-opacity {
-    transition: opacity 2s ease-in;
+    transition: opacity 3s ease, transform 0.5s ease-in-out;
+  }
+  .hero-logo {
+    height: 100px;
+    opacity: 0.95;
+    transition: transform 0.6s ease;
+  }
+  
+  .hero-logo:hover {
+    transform: scale(1.05);
   }
   
   /* 4. Button Styling */
