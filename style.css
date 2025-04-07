@@ -22,6 +22,15 @@ body {
   .transition-opacity {
     transition: opacity 3s ease, transform 0.5s ease-in-out;
   }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 4vh; /* ✨ ADDED: nudges everything up slightly */
+    margin-top: -150px; 
+  }
   .hero-logo {
     height: 100px;
     opacity: 0.95;
