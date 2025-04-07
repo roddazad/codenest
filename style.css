@@ -121,13 +121,16 @@ body {
   animation-iteration-count: infinite, infinite;
   }
   #slogan::after {
-    content: "_";
-    animation: blink 1s step-end infinite;
-    margin-left: 4px;
+    content: "";
+  display: inline-block;
+  width: 10px;
+  background-color: #f8d57e;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
   }
   
   @keyframes blink {
-    from, to { opacity: 0; }
+    0%, 100% { opacity: 0; }
     50% { opacity: 1; }
   }
   
