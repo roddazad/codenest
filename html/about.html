@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About CodeNest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/stars_500.css">
+  <link rel="icon" href="assets/favicon/codenest-favicon-32x32.png" type="image/png">
+  <style>
+    body {
+      background-color: #0c1f2e;
+      color: white;
+    }
+    .about-hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 4rem 1rem;
+    }
+    .about-hero-logo {
+      height: 130px;
+      margin-bottom: 25px;
+      animation: floatLogo 6s ease-in-out infinite;
+    }
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #f8d57e;
+      margin-bottom: 1.5rem;
+    }
+    .card.team-card {
+      height: 100%;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      background-color: #0c1f2e;
+      border: 1px solid #2b3d4f;
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card.team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(248, 213, 126, 0.15);
+    }
+    .card.team-card h5 {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .card.team-card p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .team-img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 2px solid #f8d57e;
+      margin-bottom: 10px;
+    }
+    .cta-section {
+      background-color: #f8d57e;
+      color: #041929;
+      padding: 3rem;
+      text-align: center;
+      border-radius: 20px;
+      margin-top: 4rem;
+    }
+    .team-bio {
+  color: #e0e0e0; /* or try #f8f8f8 for even lighter */
+  font-size: 0.95rem;
+}
+.team-lead {
+    color: #e0e0e0;
+}
+.tech-icon {
+  background-color: #1e2a38;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  margin: 5px;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  background-color: #f8d57e;
+  color: #041929;
+  transform: scale(1.05);
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-transparent px-4 py-3">
+    <a class="navbar-brand me-auto text-white mb-3 nav-link" href="index.html">
+      <img src="../assets/logo/logo-symbol.png" alt="CodeNest Logo" height="50" width="50"> Home</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse custom-mobile-menu justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-end gap-3">
+        <li class="nav-item"><a class="nav-link text-warning fw-bold" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="stars-wrapper"></div>
+  <main class="container">
+    <section class="about-hero">
+      <img src="../assets/logo/logo-symbol.png" alt="CodeNest Logo" class="about-hero-logo">
+      <h1 class="display-3 fw-bold">Where Code Meets Care</h1>
+      <p class="lead">We’re more than developers — we’re digital crafters who nest your dreams into code.</p>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="mb-5">
+      <h2 class="fw-bold">Who We Are</h2>
+      <div class="row align-items-center mt-4">
+        <div class="col-md-7">
+          <p class="lead">
+            CodeNest was born in 2019 from a dream — not just to build websites, but to craft
+            meaningful digital experiences with heart and humanity. What started as a collaboration
+            between two passionate builders has since grown into a full-fledged development company with
+            a talented, handpicked team that blends creativity, technical depth, and care.
+          </p>
+          <p>
+            We’re a collective of developers and engineers who believe in one thing:
+            <strong>code should feel like home</strong>. That means we take our time to understand every
+            idea, craft every feature with love, and nurture our client relationships like we do our own projects.
+          </p>
+          <p>
+            Whether you're a startup looking to launch your first product or a business ready to scale,
+            we're here to bring your ideas to life — nested, nurtured, and built with care.
+          </p>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="../assets/TeamMembers/Rodd.png" alt="Rodd Azad, Founder of CodeNest" class="team-img mt-3" style="width: 150px; height: 150px;">
+          <h5 class="mt-3 mb-0">Rodd Azad</h5>
+          <small class="text-warning">Senior Developer, Founder & Project Director</small>
+          <p class="mt-2 fst-italic">"I don't just build — I nurture ideas into meaningful digital journeys."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="team-section my-5">
+      <h2 class="section-title text-center">Meet the Team</h2>
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-4">
+          <div class="card team-card text-center">
+            <img src="../assets/TeamMembers/amir.jpg" class="team-img" alt="Team Lead">
+            <h5 class="team-lead">Amir Hossein</h5>
+            <small class="text-warning">Team Lead & Senior Full-Stack Developer</small>
+            <p class="mt-2 team-bio">Visionary coder, team mentor, and architecture strategist leading CodeNest's technical direction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <!-- Team Cards -->
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team1.jpg" class="team-img" alt="Dev"><h5 class="text-warning">Front-End Dev</h5><p class="team-bio">Expert in UI/UX and React</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team2.jpg" class="team-img" alt="Dev"><h5 class="text-warning">Front-End Dev</h5><p class="team-bio">Pixel-perfect designer</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team3.jpg" class="team-img" alt="Dev"><h5 class="text-warning">Front-End Dev</h5><p class="team-bio">Responsive UI and animations</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team4.jpg" class="team-img" alt="Dev"><h5 class="text-warning">Back-End Dev</h5><p class="team-bio">APIs and database wizard</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team5.jpg" class="team-img" alt="Dev"><h5 class="text-warning">Back-End Dev</h5><p class="team-bio">Node.js + server security</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team6.jpg" class="team-img" alt="Dev"><h5 class="text-warning">Back-End Dev</h5><p class="team-bio">Scalable architectures</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team7.jpg" class="team-img" alt="QA"><h5 class="text-warning">Test Engineer</h5><p class="team-bio">Automation & QA guru</p></div></div>
+        <div class="col"><div class="card team-card text-center"><img src="../assets/TeamMembers/team8.jpg" class="team-img" alt="QA"><h5 class="text-warning">Test Engineer</h5><p class="team-bio">Detail-obsessed bug hunter</p></div></div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="my-5">
+        <h2 class="section-title text-center">Our Stack</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <span class="tech-icon">HTML5</span>
+          <span class="tech-icon">CSS3</span>
+          <span class="tech-icon">JavaScript</span>
+          <span class="tech-icon">Bootstrap</span>
+          <span class="tech-icon">React</span>
+          <span class="tech-icon">Node.js</span>
+          <span class="tech-icon">MongoDB</span>
+          <span class="tech-icon">MySQL</span>
+          <span class="tech-icon">GitHub</span>
+          <span class="tech-icon">Postman</span>
+        </div>
+      </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h3>Let’s Build Something Great Together</h3>
+      <p class="mb-3">Whether it’s a website, a platform, or a dream — we’re ready.</p>
+      <a href="index.html#contact" class="btn btn-dark px-4 py-2">Contact Us</a>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
