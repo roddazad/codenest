@@ -167,7 +167,7 @@ body {
 }
 
 /* ℹ️ 8. About Section */
-.about-section {
+/* .about-section {
   background: transparent;
   padding: 6rem 0;
 }
@@ -193,6 +193,69 @@ body {
   background-color: #f8d57e;
   color: #041929;
   box-shadow: 0 0 12px #f8d57e;
+} */
+.meet-team-section {
+  background-color: transparent;
+}
+
+.section-title .text-highlight {
+  color: #f8d57e;
+}
+
+.team-image-wrapper {
+  position: relative;
+  max-width: 800px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.team-image-wrapper:hover .team-img {
+  transform: scale(1.02);
+}
+
+
+.team-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.overlay-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 80px;
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+.team-image-wrapper:hover .overlay-logo {
+  transform: scale(1.1);
+}
+.badge-nesters {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #f8d57e;
+  color: #041929;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Scroll-triggered animation */
+.scroll-rise {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-rise.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 🎞️ 9. Keyframes */
@@ -242,5 +305,221 @@ body {
   .custom-mobile-menu .nav-link {
     font-weight: 500;
     font-size: 1.1rem;
+  }
+}
+/* 11. Services Carousel */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8d57e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.carousel-spacer {
+  width: 400px; 
+  flex-shrink: 0;
+}
+.full-width-container {
+  width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+.services-carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 3rem 2vw; /* side padding for breathing room */
+  -webkit-overflow-scrolling: touch;
+
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+}
+.services-carousel-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.service-card {
+  position: relative;
+  width: 400px;
+  height: 650px;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+}
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.2rem;
+  width: 100%;
+  color: white;
+  background: linear-gradient(to top, rgba(4, 25, 41, 0.95), rgba(4, 25, 41, 0.25));
+  transition: background 0.3s ease;
+}
+.service-card-overlay h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.service-card-overlay p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.service-card-body {
+  padding: 1.2rem;
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f8d57e;
+  margin-bottom: 0.5rem;
+}
+
+.service-card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+.carousel-arrows {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  z-index: 10;
+}
+
+.carousel-arrow {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #f8d57e;
+  color: #f8d57e;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  background-color: #f8d57e;
+  color: #041929;
+  box-shadow: 0 0 12px #f8d57e;
+}
+
+/* ==========================
+   Service Detail Modal Styles
+   ========================== */
+   .service-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 25, 41, 0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+  }
+  
+  .service-modal-overlay.active {
+    display: flex;
+  }
+  
+  .service-modal-content {
+    background-color: #0c1f2e;
+    border: 1px solid #2b3d4f;
+    color: white;
+    padding: 2rem;
+    max-width: 650px;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 0 30px rgba(248, 213, 126, 0.15);
+    animation: fadeSlideUp 0.5s ease;
+  }
+  
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #f8d57e;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .close-modal-btn:hover {
+    transform: scale(1.2);
+  }
+  #modal-category {
+    color: #f8d57e; /* soft gold from your brand palette */
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+/* 📱 Medium Screens (Tablet Landscape) */
+@media (max-width: 1200px) {
+  .service-card {
+    width: 360px;
+    height: 580px;
+  }
+}
+
+/* 📱 Small Screens (Tablet Portrait) */
+@media (max-width: 992px) {
+  .service-card {
+    width: 330px;
+    height: 520px;
+  }
+}
+
+/* 📱 Mobile Screens */
+@media (max-width: 768px) {
+  .service-card {
+    width: 300px;
+    height: 470px;
+  }
+}
+
+/* 📱 Extra Small Screens */
+@media (max-width: 576px) {
+  .service-card {
+    width: 270px;
+    height: 440px;
   }
 }
