@@ -29,6 +29,36 @@ body {
   position: relative;
   z-index: 10000;
 }
+/* ===== Services Dropdown ===== */
+.dropdown-menu-custom {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: #0c1f2e;
+  border: 1px solid #2b3d4f;
+  border-radius: 8px;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+  padding: 10px 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.dropdown-menu-custom li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu-custom li:hover {
+  background-color: #1c2f40;
+  
+}
+
+
+.nav-item.dropdown:hover .dropdown-menu-custom {
+  display: block;
+}
 
 .custom-toggler {
   border: none;
