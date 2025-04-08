@@ -1,224 +1,216 @@
-/* =============================
-   CodeNest Official Website CSS
-   ============================= */
+/* =======================================
+   CodeNest Official Website - style.css
+   Organized & Updated by Maman jan 💛
+========================================== */
 
-/* 1. Base Layout */
+/* 🌌 1. Base Layout & Background */
 body {
-    margin: 0;
-    background-color: #0c1f2e;
-    color: white;
-    overflow-y: auto !important;
-    position: relative;
-    
-  }
-  
-    /* 9. Main Content Layer Above Stars */
-    .main-content {
-      position: relative;
-      z-index: 1;
-    }
-  /* 2. Gradient Text for Brand Logo */
-  .text-gradient {
-    background: linear-gradient(to right, #f8d57e, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .navbar {
-    position: relative;
-    z-index: 10000;
-  }
-  .custom-toggler {
-    border: none;
-  }
-  .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
+  margin: 0;
+  background-color: #0c1f2e;
+  color: white;
+  overflow-y: auto !important;
+  position: relative;
+}
 
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255,0.85%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-  .navbar-toggler {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
-  }
-  /* 3. Slogan Fade-In Transition */
-  .transition-opacity {
-    transition: opacity 3s ease, transform .5s ease-in-out;
-  }
-  .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 4vh; /* ✨ ADDED: nudges everything up slightly */
-    margin-top: -150px; 
-    
-  }
-  .hero-logo {
-    height: 100px;
-    opacity: 0.95;
-    transition: transform 0.6s ease;
-  }
-  
-  .hero-logo:hover {
-    transform: scale(1.05);
-  }
+.main-content {
+  position: relative;
+  z-index: 1;
+}
 
-  
-  /* 4. Button Styling */
-  .btn-hero {
-    background: rgba(255, 255, 255, 0.05);
-    color: #e4d09f; /* Soft gold to match CodeNest */
-    padding: 0.9rem 2.2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 999px;
-    /* border: 1px solid rgba(255, 255, 255, 0.1); */
-    box-shadow:
-      0 10px 20px rgba(111, 112, 131, 0.3),
-      0 0 10px rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    transition: all 0.3s ease-in-out;
-    text-decoration: none; /* ❌ Remove underline */
-    display: inline-block;
-  }
-  
-  .btn-hero:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-4px) scale(1.04);
-    box-shadow:
-      0 8px 40px rgba(255, 255, 255, 0.1),
-      0 0 60px rgba(255, 255, 255, 0.08);
-    color: #fce28a; /* Brighter on hover */
-  }
-  .btn-warning {
-    background-color: #f8d57e;
-    border: none;
-  }
-  
-  .btn-warning:hover {
-    background-color: #e6c250;
-    box-shadow: 0 0 20px #f8d57e;
-  }
-  
-  /* 5. Starry Background Layer */
-  .stars-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-    pointer-events: none;
-  }
-  
- /* Star Style with Floating Animation */
+/* 🔤 2. Typography & Branding */
+.text-gradient {
+  background: linear-gradient(to right, #f8d57e, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔝 3. Navbar */
+.navbar {
+  position: relative;
+  z-index: 10000;
+}
+
+.custom-toggler {
+  border: none;
+}
+
+.custom-toggler .navbar-toggler-icon,
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+/* ✨ 4. Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 4vh;
+  margin-top: -150px;
+}
+
+.hero-logo {
+  height: 100px;
+  opacity: 0.95;
+  transition: transform 0.6s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+.transition-opacity {
+  transition: opacity 3s ease, transform 0.5s ease-in-out;
+}
+
+/* 🔘 5. Buttons */
+.btn-hero {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e4d09f;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(111, 112, 131, 0.3),
+              0 0 10px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.1),
+              0 0 60px rgba(255, 255, 255, 0.08);
+  color: #fce28a;
+}
+
+.btn-warning {
+  background-color: #f8d57e;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e6c250;
+  box-shadow: 0 0 20px #f8d57e;
+}
+
+/* 🌠 6. Starry Background */
+.stars-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .star {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.9;
-    animation-name: twinkle, floatStar;
-  animation-timing-function: ease-in-out, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  }
-  #slogan::after {
-    content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: twinkle 2s ease-in-out infinite, floatStar 16s ease-in-out infinite;
+}
+
+/* 🪄 7. Typing & Cursor Effect for Slogan */
+#slogan::after {
+  content: "";
   display: inline-block;
   width: 10px;
   background-color: #f8d57e;
   margin-left: 3px;
   animation: blink 0.7s infinite;
-  }
+}
 
-  /* Learn More Button Style */
-  .about-section {
-    background: transparent;
-    padding: 6rem 0;
-  }
-  
-  .about-section h2 {
-    font-weight: bold;
-    color: #f8d57e;
-  }
-  
-  .about-section p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .learn-more-btn {
-    border: 1px solid #f8d57e;
-    color: #f8d57e;
-    transition: all 0.3s ease;
-  }
-  
-  .learn-more-btn:hover {
-    background-color: #f8d57e;
-    color: #041929;
-    box-shadow: 0 0 12px #f8d57e;
-  }
-  
-  @keyframes blink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-  }
-  
-/* Twinkling like before */
+/* ℹ️ 8. About Section */
+.about-section {
+  background: transparent;
+  padding: 6rem 0;
+}
+
+.about-section h2 {
+  font-weight: bold;
+  color: #f8d57e;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.learn-more-btn {
+  border: 1px solid #f8d57e;
+  color: #f8d57e;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #f8d57e;
+  color: #041929;
+  box-shadow: 0 0 12px #f8d57e;
+}
+
+/* 🎞️ 9. Keyframes */
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
 @keyframes twinkle {
-    0%, 100% { opacity: 0.9; }
-    50% { opacity: 0.2; }
-  }
-  /* Gently float around like stardust */
-  @keyframes floatStar {
-    0%   { transform: translate(0, 0); }
-    25%  { transform: translate(-40px, 30px); }
-    50%  { transform: translate(50px, -35px); }
-    75%  { transform: translate(-30px, -45px); }
-    100% { transform: translate(0, 0); }
-  }
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.2; }
+}
 
+@keyframes floatStar {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-40px, 30px); }
+  50%  { transform: translate(50px, -35px); }
+  75%  { transform: translate(-30px, -45px); }
+  100% { transform: translate(0, 0); }
+}
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: #f8d57e }
-  }
-  
-  
+  from { width: 0 }
+  to { width: 100% }
+}
 
-
-  @media (max-width: 991px) {
-    .custom-mobile-menu {
-      position: absolute;
-      top: 100%;
-      right: 1rem;
-      background-color: rgba(4, 25, 41, 0.96); /* match site bg */
-      padding: 1rem 1.5rem;
-      border-radius: 0.75rem;
-      width: auto;
-      min-width: 100px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-      z-index: 9999;
-    }
-  
-    .custom-mobile-menu ul {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .custom-mobile-menu .nav-link {
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
+/* 📱 10. Responsive Nav Menu */
+@media (max-width: 991px) {
+  .custom-mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: rgba(4, 25, 41, 0.96);
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    width: auto;
+    min-width: 100px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
   }
+
+  .custom-mobile-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .custom-mobile-menu .nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+}
