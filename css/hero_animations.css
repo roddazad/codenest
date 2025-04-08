@@ -1,0 +1,66 @@
+/* =============================
+   CodeNest Official Website CSS (Animations)
+   Generated on 2025-04-08 16:10:25
+   ============================= */
+
+
+/* =============================
+   ✨ Entrance Animations (Hero)
+   ============================= */
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-animate {
+  animation: slideInDown 1s ease forwards;
+  opacity: 0;
+}
+
+.navbar-animate {
+  animation: slideInDown 1s ease forwards;
+  opacity: 0;
+}
+
+.nav-item-animate {
+  animation: slideInDown 1s ease forwards;
+  opacity: 0;
+}
+
+.hero-btn-animate {
+  animation: slideInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.slogan-animate {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
