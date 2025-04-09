@@ -236,34 +236,33 @@
       </section>
 
       <!-- Meet With Team/ About Section -->
-      <section class="meet-team-section scroll-rise py-5 text-center text-white">
-        <h2 class="fw-bold mb-4">
+      <section id="team-banner-section" class="team-banner-section">
+        <h2 id="team-heading" class="section-title text-white text-center mb-4">
           Why CodeNest? <span class="text-warning">Meet Our Team!</span>
         </h2>
       
         <div
-          class="team-image-wrapper mx-auto scroll-rise"
+          id="team-banner-wrapper"
+          class="team-banner-wrapper"
           onclick="location.href='about.html';"
         >
           <img
             src="../assets/TeamMembers/meetTheTeam.jpg"
             alt="Meet the Team"
-            class="img-fluid team-img"
+            class="team-banner-image"
           />
-          <div class="home-button"></div>
+          
+          <!-- Decorative Home Button -->
+          <div class="team-banner-button"></div>
       
-          <!-- ✅ Wrap logo and label inside a shared container -->
-          <div class="logo-overlay-container">
-            <img
-              src="../assets/logo/logo.png"
-              alt="CodeNest Logo"
-              class="logo-overlay"
-            />
-            <span class="logo-label">Official CodeNest Seal</span>
+          <!-- Logo & Label Container -->
+          <div class="team-logo-badge">
+            <img src="../assets/logo/logo.png" alt="CodeNest Logo" class="team-logo" />
+            <span class="team-logo-label">Official CodeNest Seal</span>
           </div>
       
-          <!-- 🐣 Badge remains on top -->
-          <div class="badge-nesters">Meet the Nesters 🐣</div>
+          <!-- Badge (Top Left) -->
+          <div class="team-badge">Meet the Nesters 🐣</div>
         </div>
       </section>
 
@@ -400,172 +399,167 @@
           </div>
         </section>
   
-       <!-- 💼 Projects Section Wrapper -->
-      <section id="projects" class="projects-section py-5">
-        <!-- 📌 Scroll-Animated Title + Description -->
-       <div class="projects-intro scroll-rise right text-center text-white mb-5">
-        <h2 class="section-title mb-3">
+       
+    <!-- 🚀 Projects Showcase -->
+    <section id="projects" class="projects-section py-5">
+      <!-- 📌 Animated Title + Description -->
+      <div class="projects-header scroll-slide text-center text-white mb-5">
+        <h2 class="projects-title mb-3">
           Our Projects <span class="text-warning">at <span class="text-highlight">CodeNest</span></span>
         </h2>
-    <p class="lead mx-auto" style="max-width: 700px;">
-      From elegant websites to powerful applications — each project we deliver is a nest where your digital dreams take flight. Take a peek at some of the solutions we've crafted with care, creativity, and precision.
-    </p>
-  </div>
-  
-        <!-- 🔜 Placeholder for Phase 2: Carousels -->
-        <div class="projects-carousel-wrapper">
-          <!-- ⭐️ Featured Projects Carousel -->
+        <p class="lead mx-auto" style="max-width: 700px">
+          From elegant websites to powerful applications — each project we deliver is a nest where your digital dreams take flight.
+          Take a peek at some of the solutions we've crafted with care, creativity, and precision.
+        </p>
+      </div>
+    
+      <div class="projects-carousel-wrapper">
+        <!-- ⭐️ Featured Projects Carousel -->
+        <div class="project-carousel-group">
           <h3 class="carousel-title">Featured Projects</h3>
-          <div class="projects-carousel scroll-rise left delay-1">
-            <!-- Project -->
+          <div class="project-carousel" data-direction="left">
+            <!-- 6 Cards -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 1">
               <div class="project-info">
                 <h5>Coming Soon Project 1</h5>
                 <p>A dynamic new solution from CodeNest.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 2">
               <div class="project-info">
                 <h5>Coming Soon Project 2</h5>
                 <p>Crafted with precision and care.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 3">
               <div class="project-info">
                 <h5>Coming Soon Project 3</h5>
                 <p>Tailored to transform your ideas.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 4">
               <div class="project-info">
                 <h5>Coming Soon Project 4</h5>
                 <p>Another spark of innovation on its way.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 5">
               <div class="project-info">
                 <h5>Coming Soon Project 5</h5>
                 <p>Coming soon from the minds of CodeNest.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 6">
               <div class="project-info">
                 <h5>Coming Soon Project 6</h5>
                 <p>Get ready to be inspired.</p>
               </div>
             </div>
           </div>
-        
-          <!-- 👥 Client Work Carousel -->
+        </div>
+    
+        <!-- 👥 Client Work Carousel -->
+        <div class="project-carousel-group">
           <h3 class="carousel-title mt-5">Client Work</h3>
-          <div class="projects-carousel scroll-rise left delay-1">
-            <!-- Repeat cards as needed -->
+          <div class="project-carousel" data-direction="right">
+            <!-- 6 Cards -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 1">
               <div class="project-info">
                 <h5>Client Project 1</h5>
                 <p>Custom solution for a growing brand.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 2">
               <div class="project-info">
-                <h5>Client Project 1</h5>
-                <p>Custom solution for a growing brand.</p>
+                <h5>Client Project 2</h5>
+                <p>Built for business acceleration.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 3">
               <div class="project-info">
-                <h5>Client Project 1</h5>
-                <p>Custom solution for a growing brand.</p>
+                <h5>Client Project 3</h5>
+                <p>Smart, scalable, and seamless.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 4">
               <div class="project-info">
-                <h5>Client Project 1</h5>
-                <p>Custom solution for a growing brand.</p>
+                <h5>Client Project 4</h5>
+                <p>Turning vision into results.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 5">
               <div class="project-info">
-                <h5>Client Project 1</h5>
-                <p>Custom solution for a growing brand.</p>
+                <h5>Client Project 5</h5>
+                <p>UI/UX that elevates experience.</p>
               </div>
             </div>
-            <!-- Project -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 6">
               <div class="project-info">
-                <h5>Client Project 1</h5>
-                <p>Custom solution for a growing brand.</p>
-              </div>
-            </div>
-          </div>
-        
-          <!-- 🧠 Case Studies Carousel -->
-          <h3 class="carousel-title mt-5">Case Studies</h3>
-          <div class="projects-carousel scroll-rise left delay-1">
-            <!-- Repeat cards as needed -->
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
-              <div class="project-info">
-                <h5>Case Study 1</h5>
-                <p>A deep dive into strategic innovation.</p>
-              </div>
-            </div>
-            <!-- Project -->
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
-              <div class="project-info">
-                <h5>Case Study 1</h5>
-                <p>A deep dive into strategic innovation.</p>
-              </div>
-            </div>
-            <!-- Project -->
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
-              <div class="project-info">
-                <h5>Case Study 1</h5>
-                <p>A deep dive into strategic innovation.</p>
-              </div>
-            </div>
-            <!-- Project -->
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
-              <div class="project-info">
-                <h5>Case Study 1</h5>
-                <p>A deep dive into strategic innovation.</p>
-              </div>
-            </div>
-            <!-- Project -->
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
-              <div class="project-info">
-                <h5>Case Study 1</h5>
-                <p>A deep dive into strategic innovation.</p>
+                <h5>Client Project 6</h5>
+                <p>Future-ready performance.</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+    
+        <!-- 🧠 Case Studies Carousel -->
+        <div class="project-carousel-group">
+          <h3 class="carousel-title mt-5">Case Studies</h3>
+          <div class="project-carousel" data-direction="left">
+            <!-- 5 Cards -->
+            <div class="project-card">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 1">
+              <div class="project-info">
+                <h5>Case Study 1</h5>
+                <p>A deep dive into strategic innovation.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 2">
+              <div class="project-info">
+                <h5>Case Study 2</h5>
+                <p>Uncovering business intelligence.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 3">
+              <div class="project-info">
+                <h5>Case Study 3</h5>
+                <p>Results-driven experimentation.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 4">
+              <div class="project-info">
+                <h5>Case Study 4</h5>
+                <p>Long-term growth insights.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 5">
+              <div class="project-info">
+                <h5>Case Study 5</h5>
+                <p>Strategy meets execution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
     </div>
 
    

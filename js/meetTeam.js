@@ -1,27 +1,39 @@
-// meetTeam.js - Dedicated logic for Meet the Team tablet banner
 
-// Set up IntersectionObserver for meet-team-section
-// This handles scroll-triggered rise on entering viewport
-// and prepares us to extend with scroll-up landing effect later
+// teamBanner.js – Scroll-triggered animation for Team Tablet Banner
 
-const meetTeamObserverOptions = {
-    root: null,
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
-  
-  const meetTeamObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
+const teamBanner = document.getElementById("team-banner-wrapper");
+const teamHeading = document.getElementById("team-heading");
+
+if (teamBanner) {
+  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  const handleTeamScroll = () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const isScrollingUp = currentScroll < lastScrollTop;
+
+    const rect = teamBanner.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (inView) {
+      teamBanner.classList.remove("active-scroll-up", "active-scroll-down");
+      teamHeading.classList.remove("move-up", "move-down");
+
+      if (isScrollingUp) {
+        teamBanner.classList.add("active-scroll-up");
+        teamHeading.classList.add("move-down");
+      } else {
+        teamBanner.classList.add("active-scroll-down");
+        teamHeading.classList.add("move-up"); // Slide heading upward
       }
-    });
-  }, meetTeamObserverOptions);
-  
-  // Observe the team section
-  const meetTeamSection = document.querySelector(".meet-team-section");
-  if (meetTeamSection) {
-    meetTeamObserver.observe(meetTeamSection);
-  }
-  
+    } else {
+      teamBanner.classList.remove("active-scroll-up", "active-scroll-down");
+      teamHeading.classList.remove("move-up", "move-down");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  };
+
+  window.addEventListener("scroll", handleTeamScroll);
+  window.addEventListener("load", handleTeamScroll); // Trigger once on page load
+}
+
