@@ -26,9 +26,37 @@ body {
 
 /* 🔝 3. Navbar */
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease;
+  opacity: 1;
   z-index: 10000;
+  background-color: rgba(12, 31, 46, 0.95); /* optional fallback if scrolls over content */
 }
+
+/* Hide navbar when scrolling down */
+.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.navbar-scrolled {
+  background-color: rgba(4, 25, 41, 0.75);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border-radius: 0 0 1.25rem 1.25rem;
+  padding: 0.6rem 2rem !important;
+  margin: 0 auto; 
+  width: 100%; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+  /* border: 1px solid rgba(248, 213, 126, 0.15);  */
+  left: 0;                     /* ⬅️ prevent offset */
+  right: 0;
+  top: 0;
+}
+
 /* ===== Services Dropdown ===== */
 .dropdown-menu-custom {
   display: none;
@@ -166,72 +194,69 @@ body {
   animation: blink 0.7s infinite;
 }
 
-/* ℹ️ 8. About Section */
-/* .about-section {
-  background: transparent;
-  padding: 6rem 0;
-}
 
-.about-section h2 {
-  font-weight: bold;
-  color: #f8d57e;
-}
 
-.about-section p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.learn-more-btn {
-  border: 1px solid #f8d57e;
-  color: #f8d57e;
-  transition: all 0.3s ease;
-}
-
-.learn-more-btn:hover {
-  background-color: #f8d57e;
-  color: #041929;
-  box-shadow: 0 0 12px #f8d57e;
-} */
+/* 8. 🌟 Meet the Team Section Animation */
 .meet-team-section {
   background-color: transparent;
+  opacity: 0;
+  transform: translateY(80px) !important; /* Rise from the ground */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  will-change: opacity, transform;
 }
 
+.meet-team-section.in-view {
+  opacity: 1;
+  transform: translateY(0) !important;
+}
+
+/* ✨ Section Title Highlight */
 .section-title .text-highlight {
   color: #f8d57e;
 }
 
+/* 🖼️ Tablet Frame Wrapper */
 .team-image-wrapper {
   position: relative;
-  max-width: 800px;
-  cursor: pointer;
+  max-width: 65%;
+  margin: auto;
+  border: 12px solid #1b1b1b; /* dark bezel */
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  background-color: #000;
   transition: transform 0.3s ease;
-}
-.team-image-wrapper:hover .team-img {
-  transform: scale(1.02);
+  cursor: pointer;
 }
 
+.team-image-wrapper:hover {
+  transform: scale(1.01);
+}
 
+/* 🖼️ Team Image */
 .team-image {
   width: 100%;
   height: auto;
   border-radius: 1rem;
-  transition: transform 0.4s ease;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.overlay-logo {
+/* 🟡 Soft Home Button */
+.home-button {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 80px;
-  height: auto;
-  opacity: 0.9;
-  transition: transform 0.3s ease;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #444;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(248, 213, 126, 0.4);
+  opacity: 0.8;
 }
-.team-image-wrapper:hover .overlay-logo {
-  transform: scale(1.1);
-}
+
+/* 👶 Badge: Meet the Nesters */
 .badge-nesters {
   position: absolute;
   top: 12px;
@@ -243,19 +268,96 @@ body {
   border-radius: 20px;
   font-size: 0.95rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* 🪄 Logo & Label Container */
+.logo-overlay-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(4, 25, 41, 0.6);
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(248, 213, 126, 0.2);
+  filter: drop-shadow(0 0 10px rgba(248, 213, 126, 0.4));
+  animation: pulseGlow 3.5s infinite;
+  transition: transform 0.3s ease;
+  z-index: 5;
+  cursor: pointer;
+  width: 200px; /* Optional fixed width if you want consistency */
+}
+
+/* 🖼️ Logo Image inside Container */
+
+.logo-overlay-container .logo-overlay {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  pointer-events: none;
+  margin-bottom: 8px;
+}
+/* 🏷️ Logo Label Text */
+.logo-label {
+  font-weight: 600;
+  background-color: #f8d57e;
+  color: #041929;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  box-shadow: 0 0 10px rgba(248, 213, 126, 0.35);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* 🌈 Hover Effects */
+.team-image-wrapper:hover .logo-overlay {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 15px rgba(248, 213, 126, 0.6));
+}
+
+.team-image-wrapper:hover .logo-label {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #f8d57e;
+}
+
+.logo-overlay:hover,
+.badge-nesters:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #f8d57e, 0 0 20px rgba(248, 213, 126, 0.4);
 }
 
 
 /* Scroll-triggered animation */
 .scroll-rise {
   opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: perspective(800px) rotateX(70deg) translateY(200px) scale(0.9) !important;
+  transform-origin: bottom center;
+  transition: opacity 1.3s ease-out, transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
 }
 
 .scroll-rise.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: perspective(800px) rotateX(0deg) translateY(0) scale(1) !important;
+}
+
+/* 👉 Left to Right and Right to Left Variants */
+.scroll-rise.left {
+  transform: translateX(-100px);
+}
+.scroll-rise.right {
+  transform: translateX(100px);
+}
+.scroll-rise.left.active,
+.scroll-rise.right.active {
+  transform: translateX(0);
 }
 
 /* 🎞️ 9. Keyframes */
@@ -280,6 +382,11 @@ body {
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
+}
+@keyframes pulseGlow {
+  0% { filter: drop-shadow(0 0 6px rgba(248, 213, 126, 0.3)); }
+  50% { filter: drop-shadow(0 0 12px rgba(248, 213, 126, 0.6)); }
+  100% { filter: drop-shadow(0 0 6px rgba(248, 213, 126, 0.3)); }
 }
 
 /* 📱 10. Responsive Nav Menu */
@@ -424,6 +531,9 @@ body {
   box-shadow: 0 0 12px #f8d57e;
 }
 
+
+
+
 /* ==========================
    Service Detail Modal Styles
    ========================== */
@@ -492,6 +602,164 @@ body {
     letter-spacing: 0.5px;
     margin-bottom: 0.5rem;
   }
+
+  /* ==========================
+   PROJECTS SECTION STYLING
+   ========================== */
+   /* Project Section */
+.projects-intro {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+}
+
+.projects-intro.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-highlight {
+  color: #f8d57e;
+}
+.section-title{
+  text-transform: none;
+}
+.section-title .text-highlight {
+  text-transform: none;
+  background: linear-gradient(to right, #f8d57e, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-section {
+  padding: 6rem 2rem;
+  background: transparent;
+}
+
+.projects-title-block {
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.projects-title-block.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-title-block h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #f8d57e;
+  margin-bottom: 1rem;
+}
+
+.projects-title-block p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.projects-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  
+}
+
+.projects-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  width: 620px;
+  height: 380px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #102534;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(248, 213, 126, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card-body {
+  padding: 1rem;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f8d57e;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Scroll Fade-in Animation */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scroll-fade.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-rise.delay-1 {
+  transition-delay: 0.2s;
+}
+.scroll-rise.delay-2 {
+  transition-delay: 0.4s;
+}
+.scroll-rise.delay-3 {
+  transition-delay: 0.6s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  .projects-title-block h2 {
+    font-size: 2.2rem;
+  }
+
+  .projects-title-block p {
+    font-size: 1rem;
+  }
+}
+
 /* 📱 Medium Screens (Tablet Landscape) */
 @media (max-width: 1200px) {
   .service-card {
@@ -521,5 +789,20 @@ body {
   .service-card {
     width: 270px;
     height: 440px;
+  }
+}
+/* 📱 Responsive Adjustments for Label */
+@media (max-width: 576px) {
+  .logo-overlay {
+    width: 75px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .logo-label {
+    bottom: 10px;
+    right: 95px;
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
 }

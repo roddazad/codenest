@@ -2,6 +2,7 @@
 window.addEventListener("load", function () {
   document.getElementById("slogan").classList.remove("opacity-0");
 });
+
 // Typewriter effect for slogan
 const sloganElement = document.getElementById("slogan");
 const sloganText = "Your Dream, Nested and Nurtured — with Code and Care.";
@@ -26,6 +27,8 @@ function typeLoop() {
 window.addEventListener("load", () => {
   typeLoop();
 });
+
+// Services Carousel Controls
 const carousel = document.querySelector(".services-carousel-container");
 const leftArrow = document.getElementById("carouselLeft");
 const rightArrow = document.getElementById("carouselRight");
@@ -37,37 +40,62 @@ leftArrow.addEventListener("click", () => {
 rightArrow.addEventListener("click", () => {
   carousel.scrollBy({ left: 450, behavior: "smooth" });
 });
+
+// Navbar Scroll Effects
+let lastScrollTop = 0;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Add class when scrolled down more than 50px
+  if (currentScroll > 50) {
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+
+  // Hide navbar when scrolling down, show when scrolling up
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    navbar.classList.add("navbar-hidden");
+  } else if (currentScroll < lastScrollTop) {
+    navbar.classList.remove("navbar-hidden");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+// ----- Remove any previous scroll-event based animation code -----
+// (The IntersectionObserver below is our only scroll-trigger now)
+
+// ----- IntersectionObserver for Scroll-Triggered Animations -----
 document.addEventListener("DOMContentLoaded", () => {
-  const scrollItems = document.querySelectorAll(".scroll-rise");
+  // Adjust the observer options:
+  // rootMargin: "0px 0px 100px 0px" expands the bottom of the viewport by 100px,
+  // so the animation triggers even if the element is not fully visible.
+  const observerOptions = {
+    root: null,                   // Use the viewport as the root.
+    rootMargin: "0px 0px 50% 0px",
+    threshold: 0.2               // Trigger as soon as any pixel is visible.
+  };
 
-  const scrollTrigger = () => {
-    scrollItems.forEach((item) => {
-      const top = item.getBoundingClientRect().top;
-      const winHeight = window.innerHeight;
-
-      if (top < winHeight - 100) {
-        item.classList.add("active");
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      // Debug (optional): Uncomment the line below to log when each element is observed
+      // console.log(entry.target, "is intersecting:", entry.isIntersecting);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        // Uncomment the next line if you want each element to animate only once:
+        observer.unobserve(entry.target);
       }
     });
   };
 
-  window.addEventListener("scroll", scrollTrigger);
-  scrollTrigger(); // trigger once on load
-});
-// 🪄 Scroll-triggered rise animation
-function handleScrollAnimations() {
-  const elements = document.querySelectorAll(".scroll-rise");
-  const triggerBottom = window.innerHeight * 0.85;
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-  elements.forEach((el) => {
-    const elementTop = el.getBoundingClientRect().top;
-    if (elementTop < triggerBottom) {
-      el.classList.add("show");
-    }
+  // Observe all elements that should animate on scroll.
+  // Adjust the selectors if needed so that the carousels or any other target elements are observed.
+  document.querySelectorAll(".projects-carousel-wrapper, .scroll-rise, .scroll-fade, .projects-title-block").forEach(item => {
+    observer.observe(item);
   });
-}
-
-window.addEventListener("scroll", handleScrollAnimations);
-window.addEventListener("load", handleScrollAnimations);
-// Wait for DOM to be ready
-window.addEventListener("DOMContentLoaded", typeSlogan);
+});

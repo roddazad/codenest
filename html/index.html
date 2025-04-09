@@ -152,8 +152,9 @@
     <div class="main-content position-relative">
       <!-- 🔝 Navigation Bar -->
       <nav
-        class="navbar navbar-expand-lg bg-transparent px-4 py-3 navbar-animate"
+        class="navbar navbar-expand-lg bg-transparent px-4 py-3 fixed-top"
       >
+      <!-- <nav class="navbar navbar-expand-lg px-4 py-3"></nav> -->
         <a class="navbar-brand me-auto text-white mb-3 nav-link" href="#">
           <img
             src="../assets/logo/logo-symbol.png"
@@ -234,48 +235,38 @@
         </a>
       </section>
 
-      <!-- About Section -->
-      <!-- <section id="about" class="about-section py-5 text-white">
-      <div class="container d-flex flex-column flex-md-row align-items-center gap-5">
-        <div class="about-text text-center text-md-start">
-          <h2 class="mb-4">Why CodeNest?</h2>
-          <p class="lead">
-            At CodeNest, we don’t just write code — we nest your dreams into digital reality.
-            From clean, modern websites to AI-driven experiences, our mission is to build with care,
-            creativity, and craftsmanship. Every project is personal, every detail matters.
-          </p>
-          <a href="about.html" class="btn btn-outline-light mt-3 learn-more-btn">Learn More</a>
-        </div>
-        <div class="about-img text-center">
-          <img src="../assets/logo/logo-symbol.png" alt="CodeNest Hand Logo" class="img-fluid" style="max-width: 250px;">
-        </div>
-      </div>
-    </section> -->
-      <section class="meet-team-section py-5">
-        <div class="container text-center">
-          <h2 class="section-title mb-4">
-            Why CodeNest? <br /><span class="text-highlight"
-              >Meet Our Team!</span
-            >
-          </h2>
-
-          <a
-            href="about.html"
-            class="team-image-wrapper d-inline-block scroll-rise"
-          >
-            <img
-              src="../assets/TeamMembers/meetTheTeam.jpg"
-              alt="CodeNest Team"
-              class="img-fluid rounded team-image"
-            />
+      <!-- Meet With Team/ About Section -->
+      <section class="meet-team-section scroll-rise py-5 text-center text-white">
+        <h2 class="fw-bold mb-4">
+          Why CodeNest? <span class="text-warning">Meet Our Team!</span>
+        </h2>
+      
+        <div
+          class="team-image-wrapper mx-auto scroll-rise"
+          onclick="location.href='about.html';"
+        >
+          <img
+            src="../assets/TeamMembers/meetTheTeam.jpg"
+            alt="Meet the Team"
+            class="img-fluid team-img"
+          />
+          <div class="home-button"></div>
+      
+          <!-- ✅ Wrap logo and label inside a shared container -->
+          <div class="logo-overlay-container">
             <img
               src="../assets/logo/logo.png"
               alt="CodeNest Logo"
-              class="overlay-logo"
+              class="logo-overlay"
             />
-          </a>
+            <span class="logo-label">Official CodeNest Seal</span>
+          </div>
+      
+          <!-- 🐣 Badge remains on top -->
+          <div class="badge-nesters">Meet the Nesters 🐣</div>
         </div>
       </section>
+    </div>
 
       <!-- 🌟 Services Section -->
       <section id="services" class="services-section py-5">
@@ -410,30 +401,173 @@
         </div>
       </section>
 
-      <!-- Meet the team Section -->
-      <section class="meet-team-section py-5 text-center text-white">
-        <h2 class="fw-bold mb-4">
-          Why CodeNest? <span class="text-warning">Meet Our Team!</span>
-        </h2>
+     <!-- 💼 Projects Section Wrapper -->
+    <section id="projects" class="projects-section py-5">
+      <!-- 📌 Scroll-Animated Title + Description -->
+     <div class="projects-intro scroll-rise right text-center text-white mb-5">
+      <h2 class="section-title mb-3">
+        Our Projects <span class="text-warning">at <span class="text-highlight">CodeNest</span></span>
+      </h2>
+  <p class="lead mx-auto" style="max-width: 700px;">
+    From elegant websites to powerful applications — each project we deliver is a nest where your digital dreams take flight. Take a peek at some of the solutions we've crafted with care, creativity, and precision.
+  </p>
+</div>
 
-        <div
-          class="team-image-wrapper mx-auto scroll-rise"
-          onclick="location.href='about.html';"
-        >
-          <img
-            src="../assets/team/meetTheTeam.jpeg"
-            alt="Meet the Team"
-            class="img-fluid team-img"
-          />
-          <img
-            src="../assets/team/logo.png"
-            alt="CodeNest Logo"
-            class="logo-overlay"
-          />
-          <div class="badge-nesters">Meet the Nesters 🐣</div>
+      <!-- 🔜 Placeholder for Phase 2: Carousels -->
+      <div class="projects-carousel-wrapper">
+        <!-- ⭐️ Featured Projects Carousel -->
+        <h3 class="carousel-title">Featured Projects</h3>
+        <div class="projects-carousel scroll-rise left delay-1">
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+            <div class="project-info">
+              <h5>Coming Soon Project 1</h5>
+              <p>A dynamic new solution from CodeNest.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+            <div class="project-info">
+              <h5>Coming Soon Project 2</h5>
+              <p>Crafted with precision and care.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+            <div class="project-info">
+              <h5>Coming Soon Project 3</h5>
+              <p>Tailored to transform your ideas.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+            <div class="project-info">
+              <h5>Coming Soon Project 4</h5>
+              <p>Another spark of innovation on its way.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+            <div class="project-info">
+              <h5>Coming Soon Project 5</h5>
+              <p>Coming soon from the minds of CodeNest.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Coming Soon">
+            <div class="project-info">
+              <h5>Coming Soon Project 6</h5>
+              <p>Get ready to be inspired.</p>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
+      
+        <!-- 👥 Client Work Carousel -->
+        <h3 class="carousel-title mt-5">Client Work</h3>
+        <div class="projects-carousel scroll-rise left delay-1">
+          <!-- Repeat cards as needed -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+            <div class="project-info">
+              <h5>Client Project 1</h5>
+              <p>Custom solution for a growing brand.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+            <div class="project-info">
+              <h5>Client Project 1</h5>
+              <p>Custom solution for a growing brand.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+            <div class="project-info">
+              <h5>Client Project 1</h5>
+              <p>Custom solution for a growing brand.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+            <div class="project-info">
+              <h5>Client Project 1</h5>
+              <p>Custom solution for a growing brand.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+            <div class="project-info">
+              <h5>Client Project 1</h5>
+              <p>Custom solution for a growing brand.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Client Work">
+            <div class="project-info">
+              <h5>Client Project 1</h5>
+              <p>Custom solution for a growing brand.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 🧠 Case Studies Carousel -->
+        <h3 class="carousel-title mt-5">Case Studies</h3>
+        <div class="projects-carousel scroll-rise left delay-1">
+          <!-- Repeat cards as needed -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
+            <div class="project-info">
+              <h5>Case Study 1</h5>
+              <p>A deep dive into strategic innovation.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
+            <div class="project-info">
+              <h5>Case Study 1</h5>
+              <p>A deep dive into strategic innovation.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
+            <div class="project-info">
+              <h5>Case Study 1</h5>
+              <p>A deep dive into strategic innovation.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
+            <div class="project-info">
+              <h5>Case Study 1</h5>
+              <p>A deep dive into strategic innovation.</p>
+            </div>
+          </div>
+          <!-- Project -->
+          <div class="project-card">
+            <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study">
+            <div class="project-info">
+              <h5>Case Study 1</h5>
+              <p>A deep dive into strategic innovation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 💼 Service Detail Modal -->
     <div id="serviceModal" class="service-modal-overlay">
       <div class="service-modal-content">
