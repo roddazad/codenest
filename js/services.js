@@ -1,13 +1,28 @@
-// services.js
+// =====================
+// Services Modal & Carousel Functionality
+// =====================
 
-// Grab modal elements
+// Carousel Scroll Arrows
+const carousel = document.querySelector(".services-carousel-container");
+const leftArrow = document.getElementById("carouselLeft");
+const rightArrow = document.getElementById("carouselRight");
+
+leftArrow?.addEventListener("click", () => {
+  carousel.scrollBy({ left: -450, behavior: "smooth" });
+});
+
+rightArrow?.addEventListener("click", () => {
+  carousel.scrollBy({ left: 450, behavior: "smooth" });
+});
+
+// Modal Elements
 const modal = document.getElementById("serviceModal");
 const modalTitle = document.getElementById("modal-title");
 const modalCategory = document.getElementById("modal-category");
 const modalDescription = document.getElementById("modal-description");
 const modalFeatures = document.getElementById("modal-features");
 
-// Service content
+// Service Details Data
 const serviceDetails = {
   webDevelopment: {
     category: "Website Design and Development",
@@ -134,35 +149,35 @@ const serviceDetails = {
   }
 };
 
-// Open modal on card click
-document.querySelectorAll(".service-card").forEach((card) => {
+// Modal Opening Handler
+const serviceCards = document.querySelectorAll(".service-card");
+
+serviceCards.forEach(card => {
   card.addEventListener("click", () => {
-    const service = card.dataset.service;
-    const data = serviceDetails[service];
+    const serviceKey = card.dataset.service;
+    const data = serviceDetails[serviceKey];
 
     if (data) {
       modalCategory.textContent = data.category;
       modalTitle.textContent = data.title;
       modalDescription.textContent = data.description;
-
       modalFeatures.innerHTML = "";
       data.features.forEach(feature => {
         const li = document.createElement("li");
         li.innerHTML = `<span class="text-warning">•</span> ${feature}`;
         modalFeatures.appendChild(li);
       });
-
       modal.classList.add("active");
     }
   });
 });
 
-// Close modal
-document.querySelector(".close-modal-btn").addEventListener("click", () => {
+// Modal Close Button Handler
+document.querySelector(".close-modal-btn")?.addEventListener("click", () => {
   modal.classList.remove("active");
 });
 
-// Close when clicking outside
+// Click Outside to Close Modal
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.remove("active");

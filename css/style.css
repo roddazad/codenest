@@ -228,7 +228,7 @@ body {
 /* 🖼️ Tablet Frame Wrapper */
 .team-image-wrapper {
   position: relative;
-  max-width: 65%;
+  width: 45%;
   margin: auto;
   border: 12px solid #1b1b1b; /* dark bezel */
   border-radius: 2rem;
@@ -371,6 +371,18 @@ body {
 .scroll-rise.left.active,
 .scroll-rise.right.active {
   transform: translateX(0);
+}
+/* 🌥️ Drop from the sky when scrolling back up */
+.scroll-drop {
+  opacity: 0;
+  transform: translateY(-180px) scale(0.95);
+  transition: opacity 1.2s ease-out, transform 1.8s ease-out;
+  will-change: transform, opacity;
+}
+
+.scroll-drop.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 /* =======================================
 ========================================== */
