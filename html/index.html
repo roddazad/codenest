@@ -401,7 +401,7 @@
   
        
     <!-- 🚀 Projects Showcase -->
-    <section id="projects" class="projects-section py-5">
+    <section id="projects" class="projects-section py-5 fade-in-section">
       <!-- 📌 Animated Title + Description -->
       <div class="projects-header scroll-slide text-center text-white mb-5">
         <h2 class="projects-title mb-3">
@@ -413,52 +413,115 @@
         </p>
       </div>
     
-      <div class="projects-carousel-wrapper">
+      <div class="projects-carousel-wrapper corner-slide">
         <!-- ⭐️ Featured Projects Carousel -->
         <div class="project-carousel-group">
-          <h3 class="carousel-title">Featured Projects</h3>
-          <div class="project-carousel" data-direction="left">
+          <!-- Title and the Arrows -->
+          <div class="carousel-title-row d-flex justify-content-center align-items-center gap-3 mb-3 w-100 py-5">
+            <!-- Left Arrow -->
+            <button class="carousel-arrow left" data-carousel="featured-projects" aria-label="Scroll Left">
+              &#x25C0;
+            </button>
+          
+            <!-- Title in the center -->
+            <h3 class="carousel-title mb-0">Featured Projects</h3>
+          
+            <!-- Right Arrow -->
+            <button class="carousel-arrow right" data-carousel="featured-projects" aria-label="Scroll Right">
+              &#x25B6;
+            </button>
+          </div>
+        
+          <div class="project-carousel" data-direction="left" data-carousel="featured-projects">
             <!-- 6 Cards -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 1">
+              <img src="../assets/logo/logo.png" alt="Project Thumbnail" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Coming Soon Project 1</h5>
-                <p>A dynamic new solution from CodeNest.</p>
+                <h5 class="project-title">TaskFlow Dashboard</h5>
+                <p class="project-description">
+                  A responsive project management dashboard built with React, Tailwind, and Firebase. Features real-time collaboration and drag & drop task boards.
+                </p>
+                <div class="project-buttons">
+                  <a href="taskflow-details.html" class="btn-project btn-details">See Details</a>
+                  <a href="https://taskflow-demo.com" class="btn-project btn-demo" target="_blank">Live Demo</a>
+                  <a href="https://github.com/roddazad/taskflow" class="btn-project btn-code" target="_blank">See Code</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 2">
+              <img src="../assets/logo/logo.png" alt="Project Thumbnail" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Coming Soon Project 2</h5>
-                <p>Crafted with precision and care.</p>
+                <h5 class="project-title">TaskFlow Dashboard</h5>
+                <p class="project-description">
+                  A responsive project management dashboard built with React, Tailwind, and Firebase. Features real-time collaboration and drag & drop task boards.
+                </p>
+                <div class="project-buttons">
+                  <a href="taskflow-details.html" class="btn-project btn-details">See Details</a>
+                  <a href="https://taskflow-demo.com" class="btn-project btn-demo" target="_blank">Live Demo</a>
+                  <a href="https://github.com/roddazad/taskflow" class="btn-project btn-code" target="_blank">See Code</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 3">
+              <img src="../assets/logo/logo.png" alt="Project Thumbnail" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Coming Soon Project 3</h5>
-                <p>Tailored to transform your ideas.</p>
+                <h5 class="project-title">TaskFlow Dashboard</h5>
+                <p class="project-description">
+                  A responsive project management dashboard built with React, Tailwind, and Firebase. Features real-time collaboration and drag & drop task boards.
+                </p>
+                <div class="project-buttons">
+                  <a href="taskflow-details.html" class="btn-project btn-details">See Details</a>
+                  <a href="https://taskflow-demo.com" class="btn-project btn-demo" target="_blank">Live Demo</a>
+                  <a href="https://github.com/roddazad/taskflow" class="btn-project btn-code" target="_blank">See Code</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 4">
+              <img src="../assets/logo/logo.png" alt="Project Thumbnail" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Coming Soon Project 4</h5>
-                <p>Another spark of innovation on its way.</p>
+                <h5 class="project-title">TaskFlow Dashboard</h5>
+                <p class="project-description">
+                  A responsive project management dashboard built with React, Tailwind, and Firebase. Features real-time collaboration and drag & drop task boards.
+                </p>
+                <div class="project-buttons">
+                  <a href="taskflow-details.html" class="btn-project btn-details">See Details</a>
+                  <a href="https://taskflow-demo.com" class="btn-project btn-demo" target="_blank">Live Demo</a>
+                  <a href="https://github.com/roddazad/taskflow" class="btn-project btn-code" target="_blank">See Code</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 5">
+              <img src="../assets/logo/logo.png" alt="Project Thumbnail" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Coming Soon Project 5</h5>
-                <p>Coming soon from the minds of CodeNest.</p>
+                <h5 class="project-title">TaskFlow Dashboard</h5>
+                <p class="project-description">
+                  A responsive project management dashboard built with React, Tailwind, and Firebase. Features real-time collaboration and drag & drop task boards.
+                </p>
+                <div class="project-buttons">
+                  <a href="taskflow-details.html" class="btn-project btn-details">See Details</a>
+                  <a href="https://taskflow-demo.com" class="btn-project btn-demo" target="_blank">Live Demo</a>
+                  <a href="https://github.com/roddazad/taskflow" class="btn-project btn-code" target="_blank">See Code</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Featured 6">
+              <img src="../assets/logo/logo.png" alt="Project Thumbnail" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Coming Soon Project 6</h5>
-                <p>Get ready to be inspired.</p>
+                <h5 class="project-title">TaskFlow Dashboard</h5>
+                <p class="project-description">
+                  A responsive project management dashboard built with React, Tailwind, and Firebase. Features real-time collaboration and drag & drop task boards.
+                </p>
+                <div class="project-buttons">
+                  <a href="taskflow-details.html" class="btn-project btn-details">See Details</a>
+                  <a href="https://taskflow-demo.com" class="btn-project btn-demo" target="_blank">Live Demo</a>
+                  <a href="https://github.com/roddazad/taskflow" class="btn-project btn-code" target="_blank">See Code</a>
+                </div>
               </div>
             </div>
           </div>
@@ -466,49 +529,104 @@
     
         <!-- 👥 Client Work Carousel -->
         <div class="project-carousel-group">
-          <h3 class="carousel-title mt-5">Client Work</h3>
-          <div class="project-carousel" data-direction="right">
+          <div class="carousel-title-row d-flex justify-content-center align-items-center gap-3 mb-3 w-100 py-5">
+            <!-- Left Arrow -->
+            <button class="carousel-arrow left" data-carousel="client-work" aria-label="Scroll Left">
+              &#x25C0;
+            </button>
+          
+            <!-- Title in the center -->
+            <h3 class="carousel-title mb-0">Client Work</h3>
+          
+            <!-- Right Arrow -->
+            <button class="carousel-arrow right" data-carousel="client-work" aria-label="Scroll Right">
+              &#x25B6;
+            </button>
+          </div>
+          <div class="project-carousel" data-direction="right" data-carousel="client-work">
             <!-- 6 Cards -->
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 1">
+              <img src="../assets/logo/logo.png" alt="Client Project" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Client Project 1</h5>
-                <p>Custom solution for a growing brand.</p>
+                <h5 class="project-title">EcomNest Pro</h5>
+                <p class="project-description">
+                  A customized e-commerce platform tailored for a luxury goods brand. Built using Shopify Plus with custom checkout and analytics integrations.
+                </p>
+                <div class="project-buttons">
+                  <a href="ecomnest-details.html" class="btn btn-sm btn-details">See Details</a>
+                  <a href="https://ecomnest-client.com" class="btn btn-sm btn-demo" target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 2">
+              <img src="../assets/logo/logo.png" alt="Client Project" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Client Project 2</h5>
-                <p>Built for business acceleration.</p>
+                <h5 class="project-title">EcomNest Pro</h5>
+                <p class="project-description">
+                  A customized e-commerce platform tailored for a luxury goods brand. Built using Shopify Plus with custom checkout and analytics integrations.
+                </p>
+                <div class="project-buttons">
+                  <a href="ecomnest-details.html" class="btn btn-sm btn-details">See Details</a>
+                  <a href="https://ecomnest-client.com" class="btn btn-sm btn-demo" target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 3">
+              <img src="../assets/logo/logo.png" alt="Client Project" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Client Project 3</h5>
-                <p>Smart, scalable, and seamless.</p>
+                <h5 class="project-title">EcomNest Pro</h5>
+                <p class="project-description">
+                  A customized e-commerce platform tailored for a luxury goods brand. Built using Shopify Plus with custom checkout and analytics integrations.
+                </p>
+                <div class="project-buttons">
+                  <a href="ecomnest-details.html" class="btn btn-sm btn-details">See Details</a>
+                  <a href="https://ecomnest-client.com" class="btn btn-sm btn-demo" target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 4">
+              <img src="../assets/logo/logo.png" alt="Client Project" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Client Project 4</h5>
-                <p>Turning vision into results.</p>
+                <h5 class="project-title">EcomNest Pro</h5>
+                <p class="project-description">
+                  A customized e-commerce platform tailored for a luxury goods brand. Built using Shopify Plus with custom checkout and analytics integrations.
+                </p>
+                <div class="project-buttons">
+                  <a href="ecomnest-details.html" class="btn btn-sm btn-details">See Details</a>
+                  <a href="https://ecomnest-client.com" class="btn btn-sm btn-demo" target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 5">
+              <img src="../assets/logo/logo.png" alt="Client Project" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Client Project 5</h5>
-                <p>UI/UX that elevates experience.</p>
+                <h5 class="project-title">EcomNest Pro</h5>
+                <p class="project-description">
+                  A customized e-commerce platform tailored for a luxury goods brand. Built using Shopify Plus with custom checkout and analytics integrations.
+                </p>
+                <div class="project-buttons">
+                  <a href="ecomnest-details.html" class="btn btn-sm btn-details">See Details</a>
+                  <a href="https://ecomnest-client.com" class="btn btn-sm btn-demo" target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
             <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Client 6">
+              <img src="../assets/logo/logo.png" alt="Client Project" class="project-thumbnail" />
+            
               <div class="project-info">
-                <h5>Client Project 6</h5>
-                <p>Future-ready performance.</p>
+                <h5 class="project-title">EcomNest Pro</h5>
+                <p class="project-description">
+                  A customized e-commerce platform tailored for a luxury goods brand. Built using Shopify Plus with custom checkout and analytics integrations.
+                </p>
+                <div class="project-buttons">
+                  <a href="ecomnest-details.html" class="btn btn-sm btn-details">See Details</a>
+                  <a href="https://ecomnest-client.com" class="btn btn-sm btn-demo" target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
           </div>
@@ -516,53 +634,153 @@
     
         <!-- 🧠 Case Studies Carousel -->
         <div class="project-carousel-group">
-          <h3 class="carousel-title mt-5">Case Studies</h3>
-          <div class="project-carousel" data-direction="left">
+          <div class="carousel-title-row d-flex justify-content-center align-items-center gap-3 mb-3 w-100 py-5">
+            <!-- Left Arrow -->
+            <button class="carousel-arrow left" data-carousel="case-studies" aria-label="Scroll Left">
+              &#x25C0;
+            </button>
+          
+            <!-- Title in the center -->
+            <h3 class="carousel-title mb-0">Case Studies</h3>
+          
+            <!-- Right Arrow -->
+            <button class="carousel-arrow right" data-carousel="case-studies" aria-label="Scroll Right">
+              &#x25B6;
+            </button>
+          </div>
+          <div class="project-carousel" data-direction="left" data-carousel="case-studies">
             <!-- 5 Cards -->
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 1">
-              <div class="project-info">
-                <h5>Case Study 1</h5>
-                <p>A deep dive into strategic innovation.</p>
+            <div class="project-card case-study">
+              <img src="../assets/logo/logo.png" alt="Case Study Thumbnail" class="project-img" />
+            
+              <div class="project-body">
+                <h5 class="project-title">Case Study Title</h5>
+                <p class="project-description">
+                  A detailed look into how CodeNest solved real-world challenges through strategic design, scalable development, and data-driven improvements for our clients.
+                </p>
+            
+                <div class="project-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Custom CMS</span>
+                  <span class="tag">SEO</span>
+                </div>
+            
+                <div class="project-buttons">
+                  <a href="case-study.html" class="btn btn-warning">Read Case Study</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
               </div>
             </div>
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 2">
-              <div class="project-info">
-                <h5>Case Study 2</h5>
-                <p>Uncovering business intelligence.</p>
+            <div class="project-card case-study">
+              <img src="../assets/logo/logo.png" alt="Case Study Thumbnail" class="project-img" />
+            
+              <div class="project-body">
+                <h5 class="project-title">Case Study Title</h5>
+                <p class="project-description">
+                  A detailed look into how CodeNest solved real-world challenges through strategic design, scalable development, and data-driven improvements for our clients.
+                </p>
+            
+                <div class="project-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Custom CMS</span>
+                  <span class="tag">SEO</span>
+                </div>
+            
+                <div class="project-buttons">
+                  <a href="case-study.html" class="btn btn-warning">Read Case Study</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
               </div>
             </div>
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 3">
-              <div class="project-info">
-                <h5>Case Study 3</h5>
-                <p>Results-driven experimentation.</p>
+            <div class="project-card case-study">
+              <img src="../assets/logo/logo.png" alt="Case Study Thumbnail" class="project-img" />
+            
+              <div class="project-body">
+                <h5 class="project-title">Case Study Title</h5>
+                <p class="project-description">
+                  A detailed look into how CodeNest solved real-world challenges through strategic design, scalable development, and data-driven improvements for our clients.
+                </p>
+            
+                <div class="project-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Custom CMS</span>
+                  <span class="tag">SEO</span>
+                </div>
+            
+                <div class="project-buttons">
+                  <a href="case-study.html" class="btn btn-warning">Read Case Study</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
               </div>
             </div>
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 4">
-              <div class="project-info">
-                <h5>Case Study 4</h5>
-                <p>Long-term growth insights.</p>
+            <div class="project-card case-study">
+              <img src="../assets/logo/logo.png" alt="Case Study Thumbnail" class="project-img" />
+            
+              <div class="project-body">
+                <h5 class="project-title">Case Study Title</h5>
+                <p class="project-description">
+                  A detailed look into how CodeNest solved real-world challenges through strategic design, scalable development, and data-driven improvements for our clients.
+                </p>
+            
+                <div class="project-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Custom CMS</span>
+                  <span class="tag">SEO</span>
+                </div>
+            
+                <div class="project-buttons">
+                  <a href="case-study.html" class="btn btn-warning">Read Case Study</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
               </div>
             </div>
-            <div class="project-card">
-              <img src="../assets/Project-Images/comingSoon.jpg" alt="Case Study 5">
-              <div class="project-info">
-                <h5>Case Study 5</h5>
-                <p>Strategy meets execution.</p>
+            <div class="project-card case-study">
+              <img src="../assets/logo/logo.png" alt="Case Study Thumbnail" class="project-img" />
+            
+              <div class="project-body">
+                <h5 class="project-title">Case Study Title</h5>
+                <p class="project-description">
+                  A detailed look into how CodeNest solved real-world challenges through strategic design, scalable development, and data-driven improvements for our clients.
+                </p>
+            
+                <div class="project-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Custom CMS</span>
+                  <span class="tag">SEO</span>
+                </div>
+            
+                <div class="project-buttons">
+                  <a href="case-study.html" class="btn btn-warning">Read Case Study</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card case-study">
+              <img src="../assets/logo/logo.png" alt="Case Study Thumbnail" class="project-img" />
+            
+              <div class="project-body">
+                <h5 class="project-title">Case Study Title</h5>
+                <p class="project-description">
+                  A detailed look into how CodeNest solved real-world challenges through strategic design, scalable development, and data-driven improvements for our clients.
+                </p>
+            
+                <div class="project-tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Custom CMS</span>
+                  <span class="tag">SEO</span>
+                </div>
+            
+                <div class="project-buttons">
+                  <a href="case-study.html" class="btn btn-warning">Read Case Study</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    
     </div>
-
-   
 
     <!-- 💼 Service Detail Modal -->
     <div id="serviceModal" class="service-modal-overlay">
@@ -582,5 +800,44 @@
     <script src="../js/services.js"></script>
     <script src="../js/meetTeam.js"></script>
     <script src="../js/project.js"></script>
+    
+    <script>
+      // Assume we have stopAutoScroll(carousel) and startAutoScroll(carousel, direction)
+      // from your projects.js code.
+      
+      document.querySelectorAll(".carousel-arrow").forEach((arrowButton) => {
+        arrowButton.addEventListener("click", () => {
+          const isLeft = arrowButton.classList.contains("left");
+          const carouselName = arrowButton.dataset.carousel;
+          const carousel = document.querySelector(`.project-carousel[data-carousel="${carouselName}"]`);
+          if (!carousel) return;
+      
+          // 1) Pause auto-scrolling immediately.
+          stopAutoScroll(carousel);
+      
+          // 2) Perform the manual arrow scroll
+          const firstCard = carousel.querySelector(".project-card");
+          if (!firstCard) return;
+      
+          const cardWidth = firstCard.offsetWidth;
+          const step = cardWidth + 20;
+      
+          carousel.scrollBy({
+            left: isLeft ? -step : step,
+            behavior: "smooth",
+          });
+      
+          // 3) Optionally, resume auto-scrolling after a short delay
+          const direction = carousel.dataset.direction || "left";
+      
+          // E.g. after 2 seconds, resume
+          setTimeout(() => {
+            startAutoScroll(carousel, direction);
+          }, 2000);
+        });
+      });
+      </script>
+      
+    
   </body>
 </html>
