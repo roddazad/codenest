@@ -1,0 +1,324 @@
+/* ================= TECH & FRAMEWORK CAROUSEL ================= */
+.tech-carousel-section {
+    padding: 5rem 2rem;
+    background-color: #0c1f2e;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tech-carousel-heading {
+    display: inline-block;
+    perspective: 1000px;
+    margin-bottom: 3rem;
+  }
+  
+  .tech-carousel-heading .flip-text {
+    display: inline-block;
+    animation: flipText 6s infinite alternate ease-in-out;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f8d57e;
+  }
+  
+  @keyframes flipText {
+    0%, 40% {
+      transform: rotateY(0);
+      content: "Over 60 Technologies";
+    }
+    60%, 100% {
+      transform: rotateY(180deg);
+      content: "Over 30 Frameworks";
+    }
+  }
+  
+  /* Alternatively: Use JS to dynamically swap the text. */
+  
+  /* 💻 Flip Cards */
+  .tech-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1.5rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tech-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tech-card {
+    width: 220px;
+    height: 280px;
+    perspective: 1000px;
+    flex-shrink: 0;
+  }
+  
+  .tech-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+  }
+  
+  .tech-card:hover .tech-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .tech-card-front,
+  .tech-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .tech-card-front {
+    background: #102534;
+    flex-direction: column;
+  }
+  
+  .tech-card-front img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-card-front h5 {
+    font-size: 1.1rem;
+    color: #f8d57e;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .tech-card-back {
+    background: #1a3245;
+    transform: rotateY(180deg);
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.4;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  /* 🔄 Flip Heading Container */
+
+.flip-heading-container {
+    width: 320px;
+    height: 70px;
+    margin: 0 auto 2rem auto;
+    perspective: 1000px;
+  }
+  
+  .flip-heading-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    transition: transform 2.5s ease-in-out;
+    transform-style: preserve-3d;
+    animation: flipInfinite 6s infinite;
+  }
+  
+  .flip-heading-front,
+  .flip-heading-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f8d57e;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(248, 213, 126, 0.25);
+  }
+  
+  .flip-heading-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* 🔁 Flip Animation */
+  @keyframes flipInfinite {
+    0%, 40% {
+      transform: rotateY(0deg);
+    }
+    50%, 90% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  /* ============================
+   CodeNest Tech Carousel Styles
+   ============================ */
+
+.tech-carousel-section {
+    padding: 4rem 1rem;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  .tech-carousel-wrapper {
+    
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+  }
+  
+  .tech-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tech-carousel {
+    display: flex;
+    gap: 2rem;
+    min-width: 100%;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  .tech-full-width {
+    width: 100vw;
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* Flip Card Base */
+  .flip-card {
+    perspective: 1000px;
+    background: transparent !important; /* ✅ important to kill any default */
+    overflow: visible;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    border-radius: inherit;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front & Back Faces */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: inherit;
+    background: transparent !important; /* 🔥 Key fix */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Front */
+  .flip-card-front img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .flip-card-front h5 {
+    color: #f8d57e;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+  
+  /* Back */
+  .flip-card-back {
+    /* transform: rotateY(180deg);
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 1rem;
+    line-height: 1.4; */
+    transform: rotateY(180deg);
+  }
+  
+  /* Responsive Tweak */
+  @media (max-width: 576px) {
+    .flip-card {
+      width: 160px;
+      height: 220px;
+    }
+  
+    .flip-card-front img {
+      max-width: 60px;
+    }
+  }
+  /* 👀 Entrance Animation */
+.tech-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  
+  .tech-section.tech-section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* ✨ Flip Card Hover Enhancements */
+.tech-card {
+    width: 180px;
+    height: 220px;
+    perspective: 1000px;
+    border-radius: 1.5rem; 
+    transform-style: preserve-3d;
+    overflow: visible; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .tech-card:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 25px rgba(248, 213, 126, 0.35),
+                0 0 50px rgba(255, 255, 255, 0.1);
+    z-index: 2;
+  }
+  
+  /* Optional: Add glass effect on hover */
+  .tech-card:hover .card-inner {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .card-inner {
+    transition: transform 0.6s ease;
+  }
+  .tech-card:hover {
+    animation: pulseGlow 1.5s infinite alternate;
+  }
+  
+  @keyframes pulseGlow {
+    from {
+      box-shadow: 0 8px 24px rgba(248, 213, 126, 0.2);
+    }
+    to {
+      box-shadow: 0 12px 40px rgba(248, 213, 126, 0.4);
+    }
+  }

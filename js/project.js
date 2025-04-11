@@ -131,3 +131,37 @@ document.querySelectorAll(".carousel-arrows").forEach((arrowGroup) => {
     targetCarousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
   });
 });
+// Assume we have stopAutoScroll(carousel) and startAutoScroll(carousel, direction)
+      // from your projects.js code.
+      
+      document.querySelectorAll(".carousel-arrow").forEach((arrowButton) => {
+        arrowButton.addEventListener("click", () => {
+          const isLeft = arrowButton.classList.contains("left");
+          const carouselName = arrowButton.dataset.carousel;
+          const carousel = document.querySelector(`.project-carousel[data-carousel="${carouselName}"]`);
+          if (!carousel) return;
+      
+          // 1) Pause auto-scrolling immediately.
+          stopAutoScroll(carousel);
+      
+          // 2) Perform the manual arrow scroll
+          const firstCard = carousel.querySelector(".project-card");
+          if (!firstCard) return;
+      
+          const cardWidth = firstCard.offsetWidth;
+          const step = cardWidth + 20;
+      
+          carousel.scrollBy({
+            left: isLeft ? -step : step,
+            behavior: "smooth",
+          });
+      
+          // 3) Optionally, resume auto-scrolling after a short delay
+          const direction = carousel.dataset.direction || "left";
+      
+          // E.g. after 2 seconds, resume
+          setTimeout(() => {
+            startAutoScroll(carousel, direction);
+          }, 2000);
+        });
+      });
